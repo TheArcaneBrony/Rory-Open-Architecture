@@ -3,22 +3,9 @@
 {
   imports =
     [
-       ../../../modules/packages/vim.nix
+      ../../../modules/packages/vim.nix
+      ../../../modules/base-server.nix
     ];
-
-  boot = {
-	loader = {
-		grub = {
-			enable = true;
-			version = 2;
-			device = "/dev/sda"; # nodev for EFI only
-			
-			# EFI
-			efiSupport = false;
-			efiInstallAsRemovable = false;
-		};
-	};
-  };
 
   networking = {
 	hostName = "RoryNix";
@@ -32,7 +19,7 @@
 	};
   };
 
-  time.timeZone = "Europe/Brussels";
+  #time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_US.UTF-8";
 
   services = {
