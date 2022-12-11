@@ -9,7 +9,7 @@ fi
 if [ "$1" = "/" ]; then
     nixos-generate-config --show-hardware-config > hardware-configuration.nix
     git add -f hardware-configuration.nix
-    nixos-rebuild --flake ".#${2}" build
+    nixos-rebuild switch --flake ".#${2}"
     git rm --cached hardware-configuration.nix
     exit
 else
