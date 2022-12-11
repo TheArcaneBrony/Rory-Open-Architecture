@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -6,6 +6,7 @@
        ./base.nix
     ];
 
+  # My servers always use /dev/sda as boot disk...
   boot = {
     loader = {
       grub = {
