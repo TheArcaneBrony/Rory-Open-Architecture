@@ -4,6 +4,7 @@
   imports =
     [
        ./base.nix
+       ./users/chris.nix
     ];
 
   # My servers always use /dev/sda as boot disk...

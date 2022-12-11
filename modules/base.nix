@@ -4,7 +4,7 @@
   imports =
     [
       ./packages/vim.nix
-      ./users.nix
+      ./users/Rory.nix
       /etc/nixos/hardware-configuration.nix
     ];
 
@@ -41,7 +41,6 @@
     neofetch
     lnav
     zsh
-    feh
     git
     lsd
     #sshfs
@@ -52,4 +51,3 @@
 
   system.stateVersion = "22.11"; # DO NOT EDIT!
 }
-
