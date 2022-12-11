@@ -3,8 +3,7 @@
 {
   imports =
     [
-      ../../../modules/packages/vim.nix
-      ../../../modules/base-server.nix
+      ../../modules/base-server.nix
     ];
 
   networking = {
@@ -23,29 +22,13 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   services = {
- 	xserver = {
-		enable = true;
-  		videoDrivers = [ "intel" ];
-  		desktopManager.gnome.enable = true;
-		libinput.enable = true;
-		layout = "us";
-		modules = [ pkgs.xorg.xf86videointel ];
-	};
-	gnome = {
-		
-    		core-developer-tools.enable = false;
-		core-utilities.enable = false;
-		tracker-miners.enable = false;
-		tracker.enable = false;
-	};
-
-	printing.enable = false;
-	openssh = {
-          enable = true;
-          extraConfig = ''
-            MaxAuthTries 32
-            '';
-	};	
+ 	
+    openssh = {
+            enable = true;
+            extraConfig = ''
+              MaxAuthTries 32
+              '';
+    };	
   };
   security.sudo.wheelNeedsPassword = false;
   nixpkgs.config.allowUnfree = true;
@@ -58,8 +41,6 @@
     extraGroups = [ "wheel" ];
     packages = with pkgs; [
       #xterm
-      gnomeExtensions.vitals
-      gnomeExtensions.runcat
     ];
     initialPassword = "password";
   };
@@ -70,31 +51,12 @@
     lnav
     pciutils
     zsh
-    gnome-console
     feh
     git
     lsd
-    #nerdfonts
-    #element-web
     sshfs
-    cinnamon.nemo
-    firefox-bin
     kitty.terminfo
-    glxinfo
-    #epiphany
-    # Various extensions...
-    # - Gnome
-    #gnomeExtensions.vitals
-    #gnomeExtensions.runcat
-    #  - Dont work on gnome 43:
-    #gnomeExtensions.undecorate
-    #gnomeExtensions.inactivity
-    #gnomeExtensions.left-clock
-    # - Vim
     vimPlugins.vim-nix
-  ];
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
 
