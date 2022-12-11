@@ -8,10 +8,14 @@ if [ $# -ne 2 ]; then
 fi
 if [ "$1" = "/" ]; then
     nixos-generate-config --show-hardware-config > hardware-configuration.nix
+    git add -f hardware-configuration.nix
     nixos-rebuild --flake ".#${2}" build
-    exit 1
+    git rm --cached hardware-configuration.nix
+    exit
 else
     nixos-generate-config --show-hardware-config > hardware-configuration.nix
+    git add -f hardware-configuration.nix
     nixos-install --root "${1}" --flake ".#${2}" 
-    exit 1
+    git rm --cached hardware-configuration.nix
+    exit
 fi
