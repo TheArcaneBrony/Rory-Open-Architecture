@@ -5,7 +5,6 @@
     [
       ./packages/vim.nix
       ./users/Rory.nix
-      /etc/nixos/hardware-configuration.nix
     ];
 
   networking = {
