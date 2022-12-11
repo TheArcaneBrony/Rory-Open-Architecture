@@ -5,6 +5,7 @@
     [
       ./packages/vim.nix
       ./users.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   networking = {
