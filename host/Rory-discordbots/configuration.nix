@@ -7,22 +7,21 @@
     ];
 
   networking = {
-	hostName = "RoryNix";
-	networkmanager.enable = true;
-	wireless.enable = false;
-  	
-	firewall = {
-		enable = false;
-		# allowedTCPPorts = [ ... ];
-		# allowedUDPPorts = [ ... ];
-	};
+    hostName = "RoryNix";
+    networkmanager.enable = true;
+    wireless.enable = false;
+      
+    firewall = {
+      enable = false;
+      # allowedTCPPorts = [ ... ];
+      # allowedUDPPorts = [ ... ];
+    };
   };
 
   #time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_US.UTF-8";
 
   services = {
- 	
     openssh = {
             enable = true;
             extraConfig = ''
@@ -46,17 +45,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wget
-    neofetch
-    lnav
-    pciutils
-    zsh
-    feh
-    git
-    lsd
-    sshfs
-    kitty.terminfo
-    vimPlugins.vim-nix
+    dotnet-sdk_7
   ];
 
 
