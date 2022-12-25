@@ -14,11 +14,11 @@
         enable = true;
         version = 2;
         device = "/dev/sda"; # nodev for EFI only
-        
         # EFI
         efiSupport = false;
         efiInstallAsRemovable = false;
       };
+      timeout = 0;
     };
   };
 

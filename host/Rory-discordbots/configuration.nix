@@ -7,7 +7,7 @@
     ];
 
   networking = {
-    hostName = "RoryNix";
+    hostName = "Rory-discordbots";
     networkmanager.enable = true;
     wireless.enable = false;
       
