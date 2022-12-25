@@ -4,6 +4,7 @@
   imports =
     [
       ../../modules/base-server.nix
+      ./services.nix
     ];
 
   networking = {
@@ -46,6 +47,7 @@
 
   environment.systemPackages = with pkgs; [
     dotnet-sdk_7
+    botcore-v4.packages.x86_64-linux.default
   ];
 
 

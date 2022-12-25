@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  systemd.services."foo@" = {
+  systemd.services."botcore.bot@" = {
     description = "foo";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {

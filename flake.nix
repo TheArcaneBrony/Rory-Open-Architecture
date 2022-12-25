@@ -8,6 +8,9 @@
       # closest you can get to following the channel with flakes.
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
+    botcore-v4 = {
+      url = "gitlab:BotCore-Devs/BotCore-v4/staging";
+    };
   };
 
   # Outputs can be anything, but the wiki + some commands define their own
