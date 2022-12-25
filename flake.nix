@@ -24,6 +24,9 @@
           ./host/Rory-discordbots/configuration.nix
           ./hardware-configuration.nix
         ];
+        specialArgs = {
+          inherit botcore-v4;
+        };
       };
     };
   };
