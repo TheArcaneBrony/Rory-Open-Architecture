@@ -4,7 +4,7 @@
   imports =
     [
       ../../modules/base-server.nix
-      ./services.nix
+     # ./services.nix
     ];
 
   networking = {

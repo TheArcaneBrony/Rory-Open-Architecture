@@ -12,6 +12,6 @@
       Restart = "always";
       RestartSec = "5s";
     };
-  }
+  };
 }
 
