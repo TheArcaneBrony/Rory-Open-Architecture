@@ -17,6 +17,7 @@
   # environment.systemPackages = with pkgs; [
   #   postgresql
   # ];
+  systemd.tmpfiles.rules = [  "d /data/pg 0755 postgres postgres" ];
 
   services.postgresql = {
     enable = true;
