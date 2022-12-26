@@ -13,7 +13,7 @@
       grub = {
         enable = true;
         version = 2;
-        device = "/dev/sda"; # nodev for EFI only
+        devices = [ "/dev/sda" ]; # nodev for EFI only
         # EFI
         efiSupport = false;
         efiInstallAsRemovable = false;
@@ -50,7 +50,6 @@
   };
   security.sudo.wheelNeedsPassword = false;
   nixpkgs.config.allowUnfree = true;
-
 
   system.stateVersion = "22.11"; # DO NOT EDIT!
 }
