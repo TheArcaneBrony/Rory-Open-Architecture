@@ -28,6 +28,13 @@
           inherit botcore-v4;
         };
       };
+      Rory-postgres = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./host/Rory-postgres/configuration.nix
+          ./hardware-configuration.nix
+        ];
+      };
     };
   };
 }

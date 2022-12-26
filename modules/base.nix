@@ -13,7 +13,7 @@
       enable = false;
       # allowedTCPPorts = [ ... ];
       # allowedUDPPorts = [ ... ];
-    };
+    };botcore-v4.packages.x86_64-linux.default
   };
 
   #time.timeZone = "Europe/Brussels";

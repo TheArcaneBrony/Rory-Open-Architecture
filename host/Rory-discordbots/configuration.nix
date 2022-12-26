@@ -9,7 +9,7 @@
 
   networking = {
     hostName = "Rory-discordbots";
-    networkmanager.enable = true;
+    networkmanager.enable = false;
     wireless.enable = false;
       
     firewall = {
@@ -17,6 +17,10 @@
       # allowedTCPPorts = [ ... ];
       # allowedUDPPorts = [ ... ];
     };
+    interfaces.ens18.ipv4.addresses = [ { 
+      address = "192.168.1.50";
+      prefixLength = 24;
+    } ];
   };
 
   #time.timeZone = "Europe/Brussels";
@@ -46,7 +50,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    dotnet-sdk_7
     botcore-v4.packages.x86_64-linux.default
   ];
 
