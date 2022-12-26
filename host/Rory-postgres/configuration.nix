@@ -37,6 +37,12 @@
     #   GRANT ALL PRIVILEGES ON DATABASE nixcloud TO nixcloud;
     # '';
     dataDir = "/data/pg";
+    extraConfig = ''
+      max_connections = 100
+      shared_buffers = 128MB
+      max_wal_size = 1GB
+      min_wal_size = 80MB
+    '';
   };
 
   system.stateVersion = "22.11"; # DO NOT EDIT!
