@@ -35,7 +35,7 @@
     #   CREATE DATABASE nixcloud;
     #   GRANT ALL PRIVILEGES ON DATABASE nixcloud TO nixcloud;
     # '';
-    dataDir = "/data";
+    dataDir = "/data/pg";
   };
 
   system.stateVersion = "22.11"; # DO NOT EDIT!

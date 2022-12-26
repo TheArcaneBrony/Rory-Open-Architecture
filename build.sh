@@ -17,6 +17,6 @@ else
     git add -f hardware-configuration.nix
     nixos-install --root "${1}" --flake ".#${2}" 
     git rm --cached hardware-configuration.nix
-    cp . "${1}/Rory-Open-Architecture" -rv
+    cp . "${1}/Rory-Open-Architecture" -r
     exit
 fi
