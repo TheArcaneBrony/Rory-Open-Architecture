@@ -13,7 +13,7 @@ if [ "$1" = "/" ]; then
     git rm --cached hardware-configuration.nix
     exit
 else
-    nixos-generate-config --show-hardware-config > hardware-configuration.nix
+    nixos-generate-config --show-hardware-config --root "${1}" > hardware-configuration.nix
     git add -f hardware-configuration.nix
     nixos-install --root "${1}" --flake ".#${2}" 
     git rm --cached hardware-configuration.nix
