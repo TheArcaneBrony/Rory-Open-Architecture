@@ -5,7 +5,9 @@
     [
       ../../modules/base-server.nix
      # ./services.nix
-     botcore-v4.modules.*
+     botcore-v4.modules.bots
+     botcore-v4.modules.frontend
+     botcore-v4.modules.dataupdater
     ];
 
   networking = {
