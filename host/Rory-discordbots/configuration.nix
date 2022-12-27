@@ -50,7 +50,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    botcore-v4.packages.x86_64-linux.default
+    botcore-v4.packages.x86_64-linux.bots
+    botcore-v4.packages.x86_64-linux.frontend
+    botcore-v4.packages.x86_64-linux.dataupdater
   ];
 
 
