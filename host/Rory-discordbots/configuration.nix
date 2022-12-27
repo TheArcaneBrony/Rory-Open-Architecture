@@ -5,6 +5,7 @@
     [
       ../../modules/base-server.nix
      # ./services.nix
+     botcore-v4.modules.*
     ];
 
   networking = {
@@ -14,28 +15,12 @@
       
     firewall = {
       enable = false;
-      # allowedTCPPorts = [ ... ];
-      # allowedUDPPorts = [ ... ];
     };
     interfaces.ens18.ipv4.addresses = [ { 
       address = "192.168.1.50";
       prefixLength = 24;
     } ];
   };
-
-  #time.timeZone = "Europe/Brussels";
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  services = {
-    openssh = {
-            enable = true;
-            extraConfig = ''
-              MaxAuthTries 32
-              '';
-    };	
-  };
-  security.sudo.wheelNeedsPassword = false;
-  nixpkgs.config.allowUnfree = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
