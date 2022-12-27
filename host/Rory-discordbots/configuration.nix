@@ -27,15 +27,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  users.users.Rory = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    packages = with pkgs; [
-      #xterm
-    ];
-    initialPassword = "password";
-  };
-
   environment.systemPackages = with pkgs; [
     botcore-v4.packages.x86_64-linux.bots
     botcore-v4.packages.x86_64-linux.frontend
