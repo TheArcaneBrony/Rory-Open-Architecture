@@ -42,6 +42,8 @@
     zsh
     git
     lsd
+    htop
+    btop
     #sshfs
     kitty.terminfo
     vimPlugins.vim-nix
