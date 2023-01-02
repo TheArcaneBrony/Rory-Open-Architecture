@@ -13,7 +13,7 @@
     };
     discord-client-proxy = {
       url = "github:Fosscord/discord-client-proxy";
-    }
+    };
   };
 
   # Outputs can be anything, but the wiki + some commands define their own
