@@ -50,7 +50,7 @@
       enable = true;
       desktopManager.plasma5 = {
         enable = true;
-        phonon-backend = "gstreamer";
+        #phonon-backend = "gstreamer";
         excludePackages = [ pkgs.kdeApplications.konsole ];
       };
       displayManager.sddm.enable = true;
