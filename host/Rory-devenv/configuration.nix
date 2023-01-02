@@ -51,7 +51,7 @@
       desktopManager.plasma5 = {
         enable = true;
         #phonon-backend = "gstreamer";
-        excludePackages = [ pkgs.kdeApplications.konsole ];
+        excludePackages = with pkgs.libsForQt5; [ konsole print-manager khelpcenter oxygen okular gwenview elisa ];
       };
       displayManager.sddm.enable = true;
       displayManager.sddm.autoLogin = {
