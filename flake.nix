@@ -18,7 +18,7 @@
 
   # Outputs can be anything, but the wiki + some commands define their own
   # specific keys. Wiki page: https://nixos.wiki/wiki/Flakes#Output_schema
-  outputs = { self, nixpkgs, botcore-v4 }: {
+  outputs = { self, nixpkgs, botcore-v4, discord-client-proxy }: {
     # nixosConfigurations is the key that nixos-rebuild looks for.
     nixosConfigurations = {
       Rory-discordbots = nixpkgs.lib.nixosSystem {
