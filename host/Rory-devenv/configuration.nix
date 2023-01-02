@@ -83,7 +83,6 @@
     udisks
     gparted
     glxinfo
-    vim-plugins.vim-nix
   ];
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
