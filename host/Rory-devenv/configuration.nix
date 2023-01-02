@@ -59,8 +59,10 @@
         user = "Rory";
       };
       libinput.enable = true;
-
+      videoDrivers = [ "qxl" ];
     };
+    qemuGuest.enable = true;
+    spice-vdagentd.enable = true;
   };
 
   users.users = {
