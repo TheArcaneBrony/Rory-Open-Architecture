@@ -48,6 +48,13 @@
           ./hardware-configuration.nix
         ];
       };
+      Rory-devenv = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./host/Rory-devenv/configuration.nix
+          ./hardware-configuration.nix
+        ];
+      };
     };
   };
 }
