@@ -14,11 +14,14 @@
     discord-client-proxy = {
       url = "github:Fosscord/discord-client-proxy";
     };
+    home-manager =  {
+      url = "github:nix-community/home-manager/master";
+    };
   };
 
   # Outputs can be anything, but the wiki + some commands define their own
   # specific keys. Wiki page: https://nixos.wiki/wiki/Flakes#Output_schema
-  outputs = { self, nixpkgs, botcore-v4, discord-client-proxy }: {
+  outputs = { self, nixpkgs, home-manager, botcore-v4, discord-client-proxy }: {
     # nixosConfigurations is the key that nixos-rebuild looks for.
     nixosConfigurations = {
       Rory-discordbots = nixpkgs.lib.nixosSystem {
@@ -29,6 +32,7 @@
         ];
         specialArgs = {
           inherit botcore-v4;
+          inherit home-manager;
         };
       };
       Rory-fosscord = nixpkgs.lib.nixosSystem {
@@ -39,6 +43,7 @@
         ];
         specialArgs = {
           inherit discord-client-proxy;
+          inherit home-manager;
         };
       };
       Rory-postgres = nixpkgs.lib.nixosSystem {
@@ -47,6 +52,9 @@
           ./host/Rory-postgres/configuration.nix
           ./hardware-configuration.nix
         ];
+        specialArgs = {
+          inherit home-manager;
+        };
       };
       Rory-devenv = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -54,6 +62,9 @@
           ./host/Rory-devenv/configuration.nix
           ./hardware-configuration.nix
         ];
+        specialArgs = {
+          inherit home-manager;
+        };
       };
     };
   };

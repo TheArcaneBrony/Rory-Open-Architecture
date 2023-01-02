@@ -14,9 +14,9 @@
     } ];
   };
 
-  # environment.systemPackages = with pkgs; [
-  #   postgresql
-  # ];
+ # environment.systemPackages = with pkgs; [
+ #   postgresql
+ # ];
   systemd.tmpfiles.rules = [  "d /data/pg 0750 postgres postgres" ];
 
   services = {
@@ -85,6 +85,9 @@
     udisks
     gparted
     glxinfo
+    vscode-with-extensions
+    nodejs
+
   ];
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })

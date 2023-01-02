@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home-manager, ... }:
 
 {
 
@@ -14,6 +14,14 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILF2IuNu//0DP/wKMuDvBgVT3YBS2uULsipbdrhJCTM7 thearcanebrony@tab-linux-desktop"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN/kNkY/E5b6rvCQLMaSbpLQ/xoyywIwVVu9uo2j/B6p Rory@RoryNix"
     ];
+  };
+
+  home-manager.users.Rory = {
+    programs.git = {
+      enable = true;
+      userName = "TheArcaneBrony";
+      userEmail = "myrainbowdash949@gmail.com";
+    };
   };
 }
 
