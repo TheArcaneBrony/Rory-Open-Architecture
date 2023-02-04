@@ -29,6 +29,7 @@
         modules = [
           ./host/Rory-discordbots/configuration.nix
           ./hardware-configuration.nix
+          home-manager.nixosModules.home-manager
         ];
         specialArgs = {
           inherit botcore-v4;
@@ -40,6 +41,7 @@
         modules = [
           ./host/Rory-fosscord/configuration.nix
           ./hardware-configuration.nix
+          home-manager.nixosModules.home-manager
         ];
         specialArgs = {
           inherit discord-client-proxy;
@@ -51,6 +53,7 @@
         modules = [
           ./host/Rory-postgres/configuration.nix
           ./hardware-configuration.nix
+          home-manager.nixosModules.home-manager
         ];
         specialArgs = {
           inherit home-manager;
@@ -61,6 +64,7 @@
         modules = [
           ./host/Rory-devenv/configuration.nix
           ./hardware-configuration.nix
+          home-manager.nixosModules.home-manager
         ];
         specialArgs = {
           inherit home-manager;

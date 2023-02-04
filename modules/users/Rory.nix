@@ -22,6 +22,8 @@
       userName = "TheArcaneBrony";
       userEmail = "myrainbowdash949@gmail.com";
     };
+
+    home.stateVersion = "22.11";
   };
 }
 
