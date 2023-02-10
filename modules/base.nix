@@ -47,6 +47,7 @@
     #sshfs
     kitty.terminfo
     vimPlugins.vim-nix
+    prometheus-node-exporter
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
