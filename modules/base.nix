@@ -49,7 +49,7 @@
     vimPlugins.vim-nix
   ];
 
-  systemd.coredump.extraConfig = mkDefault ''
+  systemd.coredump.extraConfig = lib.mkDefault ''
     Storage=none
   '';
 
