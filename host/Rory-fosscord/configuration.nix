@@ -4,9 +4,9 @@
   imports =
     [
       ../../modules/base-server.nix
-     # ./services.nix
-     discord-client-proxy.modules.proxy
-     discord-client-proxy.modules.users
+      # ./services.nix
+      discord-client-proxy.modules.proxy
+      discord-client-proxy.modules.users
     ];
 
   networking = {

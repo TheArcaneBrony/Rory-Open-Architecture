@@ -4,11 +4,11 @@
   imports =
     [
       ../../modules/base-server.nix
-     # ./services.nix
-     botcore-v4.modules.bots
-     botcore-v4.modules.frontend
-     botcore-v4.modules.dataupdater
-     botcore-v4.modules.users
+      # ./services.nix
+      botcore-v4.modules.bots
+      botcore-v4.modules.frontend
+      botcore-v4.modules.dataupdater
+      botcore-v4.modules.users
     ];
 
   networking = {

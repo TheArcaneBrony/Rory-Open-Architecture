@@ -1,5 +1,5 @@
 {
-  root = "/var/www/html_vives";
+  root = "/data/nginx/html_vives";
   locations = {
     "/" = {
       index = "index.html";
