@@ -32,8 +32,8 @@
   security.sudo.wheelNeedsPassword = false;
   nixpkgs.config.allowUnfree = true;
 
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  sound.enable = lib.mkDefault true;
+  hardware.pulseaudio.enable = lib.mkDefault true;
 
   environment.systemPackages = with pkgs; [
     wget

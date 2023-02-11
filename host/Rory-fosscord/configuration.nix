@@ -23,8 +23,8 @@
     } ];
   };
 
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  sound.enable = false;
+  hardware.pulseaudio.enable = false;
 
   system.stateVersion = "22.11"; # DO NOT EDIT!
 }
