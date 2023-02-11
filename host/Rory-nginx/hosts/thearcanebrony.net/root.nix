@@ -6,6 +6,6 @@
     };
     "/destroy" = {
       return = "301 https://gitlab.com/KinoshitaProductions/SecureDestroyer/-/raw/master/run";
-    }
+    };
   };
 }
