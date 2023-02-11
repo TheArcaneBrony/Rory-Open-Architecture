@@ -45,6 +45,7 @@
     htop
     btop
     #sshfs
+    duf
     kitty.terminfo
     vimPlugins.vim-nix
   ];
