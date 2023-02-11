@@ -61,6 +61,7 @@
           ];
         };
       };
+    };
   };
   security.sudo.wheelNeedsPassword = false;
   nixpkgs.config.allowUnfree = true;
