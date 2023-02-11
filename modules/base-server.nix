@@ -46,7 +46,21 @@
       extraConfig = ''
         MaxAuthTries 32
         '';
-    };	
+    };
+    prometheus = {
+      exporters = {
+        node = {
+          enable = true;
+          port = 9100;
+          enabledCollectors = [
+            "logind"
+            "systemd"
+          ];
+          disabledCollectors = [
+            #"textfile"
+          ];
+        };
+      };
   };
   security.sudo.wheelNeedsPassword = false;
   nixpkgs.config.allowUnfree = true;
