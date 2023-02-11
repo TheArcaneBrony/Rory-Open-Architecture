@@ -89,6 +89,7 @@
             }];
           }];
         };
+      };
     };
   };
   security.sudo.wheelNeedsPassword = false;
