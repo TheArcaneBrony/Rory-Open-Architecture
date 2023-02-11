@@ -23,7 +23,7 @@
   };
 
   networking = {
-	  hostName = lib.mkDefault "Rory-nix-base-server";
+    hostName = lib.mkDefault "Rory-nix-base-server";
     networkmanager.enable = false;
     wireless.enable = false;
     enableIPv6 = false;
@@ -61,34 +61,34 @@
           ];
         };
       };
-      promtail = {
-        enable = true;
-        configuration = {
-          server = {
-            http_listen_port = 3031;
-            grpc_listen_port = 0;
-          };
-          positions = {
-            filename = "/tmp/positions.yaml";
-          };
-          clients = [{
-            url = "https://loki.regional.seian.cloud/loki/api/v1/push";
-          }];
-          scrape_configs = [{
-            job_name = "journal";
-            journal = {
-              max_age = "12h";
-              labels = {
-                job = "systemd-journal";
-                host = "${toString config.networking.hostName}";
-              };
-            };
-            relabel_configs = [{
-              source_labels = [ "__journal__systemd_unit" ];
-              target_label = "unit";
-            }];
-          }];
+    };
+    promtail = {
+      enable = true;
+      configuration = {
+        server = {
+          http_listen_port = 3031;
+          grpc_listen_port = 0;
         };
+        positions = {
+          filename = "/tmp/positions.yaml";
+        };
+        clients = [{
+          url = "https://loki.regional.seian.cloud/loki/api/v1/push";
+        }];
+        scrape_configs = [{
+          job_name = "journal";
+          journal = {
+            max_age = "12h";
+            labels = {
+              job = "systemd-journal";
+              host = "${toString config.networking.hostName}";
+            };
+          };
+          relabel_configs = [{
+            source_labels = [ "__journal__systemd_unit" ];
+            target_label = "unit";
+          }];
+        }];
       };
     };
   };
