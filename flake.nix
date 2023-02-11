@@ -70,6 +70,17 @@
           inherit home-manager;
         };
       };
+      Rory-nginx = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./host/Rory-nginx/configuration.nix
+          ./hardware-configuration.nix
+          home-manager.nixosModules.home-manager
+        ];
+        specialArgs = {
+          inherit home-manager;
+        };
+      };
     };
   };
 }
