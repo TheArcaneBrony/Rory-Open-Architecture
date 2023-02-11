@@ -24,6 +24,8 @@
     nginx = {
       enable = true;
       package = pkgs.nginxQuic;
+      recommendedProxySettings = true;
+      recommendedTlsSettings = true;
       virtualHosts = {
         #"siliconheaven.thearcanebrony.net" = import ./hosts/thearcanebrony.net/siliconheaven.nix;
         #"lfs.thearcanebrony.net" = import ./hosts/thearcanebrony.net/lfs.nix;
