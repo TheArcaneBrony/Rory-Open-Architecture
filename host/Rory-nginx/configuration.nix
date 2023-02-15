@@ -15,7 +15,7 @@
       enable = false;
     };
     interfaces.ens18.ipv4.addresses = [ { 
-      address = "192.168.1.55";
+      address = "192.168.1.2";
       prefixLength = 24;
     } ];
   };

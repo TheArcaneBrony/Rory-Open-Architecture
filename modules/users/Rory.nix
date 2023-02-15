@@ -21,6 +21,11 @@
       enable = true;
       userName = "TheArcaneBrony";
       userEmail = "myrainbowdash949@gmail.com";
+      extraConfig = {
+        safe = {
+          directory = "/";
+        };
+      };
     };
 
     home.stateVersion = "22.11";

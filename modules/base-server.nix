@@ -9,6 +9,7 @@
 
   # My servers always use /dev/sda as boot disk...
   boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       grub = {
         enable = true;
