@@ -22,6 +22,9 @@
     interfaces.ens18.ipv4.addresses = [ { 
       address = "192.168.1.50";
       prefixLength = 24;
+    }, { 
+      address = "10.10.10.50";
+      prefixLength = 16;
     } ];
   };
 
